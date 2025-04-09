@@ -719,7 +719,7 @@ Install() {
     install_service
 
     echo -e "${Info} 创建命令快捷方式..."
-    curl -L -s https://github.com/xu348025782/ss-ceshi/blob/main/ss-2022.sh -o "/usr/local/bin/ss-2022.sh"
+    curl -L -s https://raw.githubusercontent.com/xu348025782/ss-ceshi/main/ss-2022.sh -o "/usr/local/bin/ss-2022.sh"
     chmod +x "/usr/local/bin/ss-2022.sh"
     if [ -f "/usr/local/bin/ssrust" ]; then
         rm -f "/usr/local/bin/ssrust"
