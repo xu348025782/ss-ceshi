@@ -719,7 +719,7 @@ Install() {
     install_service
 
     echo -e "${Info} 创建命令快捷方式..."
-    curl -L -s ss.jinqians.com -o "/usr/local/bin/ss-2022.sh"
+    curl -L -s https://github.com/xu348025782/ss-ceshi/blob/main/ss-2022.sh -o "/usr/local/bin/ss-2022.sh"
     chmod +x "/usr/local/bin/ss-2022.sh"
     if [ -f "/usr/local/bin/ssrust" ]; then
         rm -f "/usr/local/bin/ssrust"
@@ -988,7 +988,7 @@ Update_Shell() {
     
     # 下载最新版本进行版本对比
     local temp_file="/tmp/ss-2022.sh"
-    if ! wget --no-check-certificate -O ${temp_file} "https://raw.githubusercontent.com/jinqians/ss-2022.sh/refs/heads/main/ss-2022.sh"; then
+    if ! wget --no-check-certificate -O ${temp_file} "https://raw.githubusercontent.com/xu348025782/ss-ceshi/refs/heads/main/ss-2022.sh"; then
         echo -e "${Error} 下载最新脚本失败！"
         rm -f ${temp_file}
         return 1
@@ -1042,7 +1042,7 @@ install_shadowtls() {
     echo -e "${Info} 开始下载 ShadowTLS 安装脚本..."
     
     # 下载 ShadowTLS 脚本
-    wget -N --no-check-certificate https://raw.githubusercontent.com/jinqians/ss-2022.sh/refs/heads/main/shadowtls.sh
+    wget -N --no-check-certificate https://raw.githubusercontent.com/xu348025782/ss-ceshi/refs/heads/main/shadowtls.sh.bak
     
     if [ $? -ne 0 ]; then
         echo -e "${Error} ShadowTLS 脚本下载失败！"
