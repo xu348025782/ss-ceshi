@@ -120,7 +120,7 @@ get_server_ip() {
     # 判断IP类型并返回
     if [ -n "$ipv4" ] && [ -n "$ipv6" ]; then
         # 双栈，优先返回IPv4
-        echo "$ipv4"
+        echo "$ipv6"
     elif [ -n "$ipv4" ]; then
         # 仅IPv4
         echo "$ipv4"
